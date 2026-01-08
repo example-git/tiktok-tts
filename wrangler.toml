@@ -1,0 +1,15 @@
+name = "worker"
+main = "worker/worker.js"
+compatibility_date = "2025-08-23"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+[vars]
+# URL to your session-list endpoint (must return JSON with session_ids array).
+ADMIN_SESSION_API_URL = "http://localhost:8000/sessions"
+
+# Enable if you bind a D1 database named SESSION_DB for session caching.
+ENABLE_D1_CACHE = "false"
+
+# Comma-separated TikTok API endpoints (required).
+TIKTOK_ENDPOINTS = "https://example1/api,https://example2/api"
